@@ -12,11 +12,15 @@ name: Test
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_BASE_REF: ${{ github.base_ref }}
-      GITHUB_REF: ${{ github.ref_name }}
     steps:
       - name: Echo
         run: |
+          echo "Environment Variables"
           echo "GITHUB_BASE_REF: $GITHUB_BASE_REF"
           echo "GITHUB_REF: $GITHUB_REF"
+          echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          echo "\n\n"
+          echo "Contexts"
+          echo "github.base_ref: ${{ github.base_ref }}"
+          echo "github.ref: ${{ github.ref }}"
+          echo "github.ref_name: ${{ github.ref_name }}"
