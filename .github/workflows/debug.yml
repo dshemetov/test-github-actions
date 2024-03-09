@@ -2,10 +2,9 @@
 # Minor change
 on:
   pull_request:
-    branches:
-      - main
-      - dev
+    branches: [main, dev]
   push:
+    branches: [main, dev]
 
 name: Test
 
